@@ -42,7 +42,7 @@ namespace Ordering.Application.Features.Orders.Commands.CheckoutOrder
 
         private async Task SendMail(Order order)
         {
-            var email = new Email() { To = "ch_raheel@hotmail.com", Body = $"Order {order.Id} was created.", Subject = $"Order {order.Id} was created" };
+            var email = new Email() { To = "test@domain.com", Body = $"Order {order.Id} was created.", Subject = $"Order {order.Id} was created" };
 
             try
             {
