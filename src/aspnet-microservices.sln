@@ -19,7 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Discount", "Discount", "{99
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Discount.API", "Services\Discount\Discount.API\Discount.API.csproj", "{B6C4C641-0B91-498A-A2CC-EFAE4A3EE218}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Discount.Grpc", "Services\Discount\Discount.Grpc\Discount.Grpc.csproj", "{2EBB664E-BEF7-40A8-B848-0F6B2C40C211}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Discount.Grpc", "Services\Discount\Discount.Grpc\Discount.Grpc.csproj", "{2EBB664E-BEF7-40A8-B848-0F6B2C40C211}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{E9598897-F7D4-4FDF-A02E-C46F76599584}"
 	ProjectSection(SolutionItems) = preProject
@@ -29,13 +29,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{E959
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ordering", "Ordering", "{51716AC5-57FD-4C63-92AD-7E2BF9386CEE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ordering.API", "Services\Ordering\Ordering.API\Ordering.API.csproj", "{D9B99F5C-1066-42AF-933F-9D11DE72927B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ordering.API", "Services\Ordering\Ordering.API\Ordering.API.csproj", "{D9B99F5C-1066-42AF-933F-9D11DE72927B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ordering.Domain", "Services\Ordering\Ordering.Domain\Ordering.Domain.csproj", "{C14810EF-BF86-4406-A3C5-8D88E7AFA398}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ordering.Domain", "Services\Ordering\Ordering.Domain\Ordering.Domain.csproj", "{C14810EF-BF86-4406-A3C5-8D88E7AFA398}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ordering.Application", "Services\Ordering\Ordering.Application\Ordering.Application.csproj", "{F0666C41-A71C-437D-9942-D205D69F7D04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ordering.Application", "Services\Ordering\Ordering.Application\Ordering.Application.csproj", "{F0666C41-A71C-437D-9942-D205D69F7D04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ordering.Infrastructure", "Services\Ordering\Ordering.Infrastructure\Ordering.Infrastructure.csproj", "{1F331361-9A6D-42F5-9AEA-F28E6049DE33}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ordering.Infrastructure", "Services\Ordering\Ordering.Infrastructure\Ordering.Infrastructure.csproj", "{1F331361-9A6D-42F5-9AEA-F28E6049DE33}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingBlocks", "{E8D81201-A5FE-47BB-A72D-4C689DBB57B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventBus.Messages", "BuildingBlocks\EventBus.Messages\EventBus.Messages.csproj", "{52522B2B-CCB5-4F2D-9D28-BEE3659F91E7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -79,6 +83,10 @@ Global
 		{1F331361-9A6D-42F5-9AEA-F28E6049DE33}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F331361-9A6D-42F5-9AEA-F28E6049DE33}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F331361-9A6D-42F5-9AEA-F28E6049DE33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52522B2B-CCB5-4F2D-9D28-BEE3659F91E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52522B2B-CCB5-4F2D-9D28-BEE3659F91E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52522B2B-CCB5-4F2D-9D28-BEE3659F91E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52522B2B-CCB5-4F2D-9D28-BEE3659F91E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -96,6 +104,7 @@ Global
 		{C14810EF-BF86-4406-A3C5-8D88E7AFA398} = {51716AC5-57FD-4C63-92AD-7E2BF9386CEE}
 		{F0666C41-A71C-437D-9942-D205D69F7D04} = {51716AC5-57FD-4C63-92AD-7E2BF9386CEE}
 		{1F331361-9A6D-42F5-9AEA-F28E6049DE33} = {51716AC5-57FD-4C63-92AD-7E2BF9386CEE}
+		{52522B2B-CCB5-4F2D-9D28-BEE3659F91E7} = {E8D81201-A5FE-47BB-A72D-4C689DBB57B1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8578B412-AFE7-4BB1-8A58-1A97A416AC4A}
