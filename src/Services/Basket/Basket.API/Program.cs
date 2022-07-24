@@ -29,8 +29,8 @@ builder.Services.AddAutoMapper(typeof(Program));
 
 // MassTransit-RabbitMQ Configuration
 builder.Services.AddMassTransit(config => { 
-    config.UsingRabbitMq((context, configurator) =>  {
-        configurator.Host(builder.Configuration.GetValue<string>("EventBusSettings:HostAddress")); //"amqp://guest:guest@localhost:5672") ;
+    config.UsingRabbitMq((context, rabbitConfig) =>  {
+        rabbitConfig.Host(builder.Configuration.GetValue<string>("EventBusSettings:HostAddress")); //"amqp://guest:guest@localhost:5672") ;
     });
 });
 //builder.Services.AddMassTransitHostedService();
