@@ -25,6 +25,7 @@ builder.Services.AddGrpcClient<DiscountProtoService.DiscountProtoServiceClient>
 // General Configuration
 builder.Services.AddScoped<IBasketRepository, BasketRepository>();
 builder.Services.AddScoped<DiscountGrpcService>();
+builder.Services.AddAutoMapper(typeof(Program));
 
 // MassTransit-RabbitMQ Configuration
 builder.Services.AddMassTransit(config => { 
