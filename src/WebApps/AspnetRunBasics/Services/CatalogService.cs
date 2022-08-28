@@ -21,7 +21,7 @@ namespace AspnetRunBasics.Services
 
         public async Task<IEnumerable<CatalogModel>> GetCatalog()
         {
-            _logger.LogDebug($"Getting product catalog from url {_client.BaseAddress}");
+            _logger.LogInformation("Getting product catalog from url: {url} and custom property: {customProperty}", _client.BaseAddress, 10);
 
             var response = await _client.GetAsync("/Catalog");
             return await response.ReadContentAs<List<CatalogModel>>();
