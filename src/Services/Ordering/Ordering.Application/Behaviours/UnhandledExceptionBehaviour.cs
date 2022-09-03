@@ -1,6 +1,8 @@
 ﻿using MediatR;
 using Microsoft.Extensions.Logging;
+using Ordering.Application.Exceptions;
 using System;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -25,7 +27,17 @@ namespace Ordering.Application.Behaviours
             catch (Exception ex)
             {
                 var requestName = typeof(TRequest).Name;
-                _logger.LogError(ex, @$"Application Request: Unhandled Exception for Request {requestName} {request}");
+                string validationErrorDetails = string.Empty;
+                if (ex is ValidationException) {
+                    StringBuilder allErrors = new StringBuilder();
+
+                    foreach (var error in ((ValidationException)ex).Errors)
+                    {
+                        allErrors.AppendLine($"{error.Key}: {String.Join(" | ", error.Value)}");
+                    }
+                    validationErrorDetails = allErrors.ToString();
+                }
+                _logger.LogError(ex, "Application Request: Unhandled Exception for Request {requestName} {request}. {validationErrorDetails}",requestName, request, validationErrorDetails);
                 throw;
             }
         }
